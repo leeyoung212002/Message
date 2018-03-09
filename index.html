@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/message.css" />
+		<style>
+			.btn_group {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+	            -moz-transform: ttranslate(-50%, -50%);
+	            transform: translate(-50%, -50%);
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/message.js" ></script>
+		<script>
+			function success(){
+				$('body').message({
+					type: 'success',
+					content: '交易成功！',
+					duration: 3
+				})
+			}
+			
+			function info(){
+				$('body').message({
+					type: 'info',
+					content: '交易信息！',
+					duration: 3
+				})
+			}
+			
+			function warning(){
+				$('body').message({
+					type: 'warning',
+					content: '交易报警！',
+					duration: 3
+				})
+			}
+			
+			function danger(){
+				$('body').message({
+					type: 'danger',
+					content: '交易失败！',
+					duration: 3
+				})
+			}
+		</script>
+		
+		<div class="btn_group">
+			<button onclick="success()">success</button>
+			<button onclick="info()">info</button>
+			<button onclick="warning()">warning</button>
+			<button onclick="danger()">danger</button>
+		</div>
+	</body>
+</html>
